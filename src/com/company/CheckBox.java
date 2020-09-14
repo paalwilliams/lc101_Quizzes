@@ -14,8 +14,8 @@ public class CheckBox extends Question{
         this.questions = questions;
     }
 
-    public CheckBox(String question, int pointValue, HashMap<String, Boolean> questions) {
-        super(question, pointValue);
+    public CheckBox(String question, int pointValue, HashMap<String, Boolean> questions, String correctAnswer) {
+        super(question, pointValue, correctAnswer);
         this.questions = questions;
 
     }

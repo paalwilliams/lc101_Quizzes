@@ -21,16 +21,25 @@ public class Question {
         this.pointValue = pointValue;
     }
 
-    Question(String Question, int pointValue) {
+    public String correctAnswer;
+
+    Question(String Question, int pointValue, String correctAnswer) {
     this.Question = Question;
     this.pointValue = pointValue;
+    this.correctAnswer = correctAnswer;
     }
 
-    public String askQuestion() {
-        System.out.println(this.Question + " \n True/False:");
-        Scanner input = new Scanner(System.in);
-        String answer = input.nextLine();
-        return answer;
+    public String askQuestion(){return "a";}
+
+    public boolean checkAnswer(String answer) {
+        if(this.correctAnswer.equals(answer)) {
+            System.out.println("Correct!");
+            return true;
+        }
+        else {
+            System.out.println("Sorry, wrong answer");
+            return false;
+        }
     }
 
 
